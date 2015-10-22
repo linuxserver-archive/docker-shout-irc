@@ -4,6 +4,7 @@ ENV APTLIST="nodejs-legacy npm"
 
 # Install APTLIST
 RUN apt-get update -q && \
+apt-get install $APTLIST -qy && \
 
 ## Install Shout using NPM
 npm -g install shout && \
