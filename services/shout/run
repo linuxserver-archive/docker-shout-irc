@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /sbin/setuser abc "/command/to/execute" 
+exec /sbin/setuser abc shout --home /config
