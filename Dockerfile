@@ -1,8 +1,6 @@
 FROM linuxserver/baseimage
 MAINTAINER Gonzalo Peci <weedv2@outlook.com>
-ENV APTLIST="git-core nodejs"
-ENV NPMLIST="css-select shout"
-ENV npm_config_loglevel="warn"
+ENV APTLIST="git-core nodejs" NPMLIST="css-select shout" npm_config_loglevel="warn"
 
 # Install APTLIST
 RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash - && \
