@@ -3,7 +3,7 @@ MAINTAINER Gonzalo Peci <weedv2@outlook.com>
 ENV APTLIST="git-core nodejs" NPMLIST="css-select shout" npm_config_loglevel="warn"
 
 # Install APTLIST
-RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_5.x | bash - && \
 apt-get update -q && \
 apt-get install $APTLIST -qy && \
 
