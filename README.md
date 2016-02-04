@@ -46,5 +46,5 @@ Part of what makes our containers work so well is by allowing you to specify you
 To log in to the application, browse to https://<hostip>:9000.
 
 ## Versions
-
++ **04.02.2016:** Switch to node 5.x
 + **11.12.2015:** Initial Release
