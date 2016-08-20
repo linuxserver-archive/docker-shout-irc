@@ -7,7 +7,7 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 
 # linuxserver/shout
 
-Shout is a web IRC client that you host on your own server.
+Thelounge (fork of shoutIRC) is a web IRC client that you host on your own server.
 
 __What features does it have?__  
 - Multiple user support
@@ -59,6 +59,7 @@ To log in to the application, browse to https://<hostip>:9000.
 * To monitor the logs of the container in realtime: `docker logs -f shout`
 
 ## Versions
-+ **20.08.16:** Rebase to alpine linux.
++ **20.08.16:** Switch to thelounge fork,
+rebase to alpine linux.
 + **04.02.16:** Switch to node 5.x
 + **11.12.15:** Initial Release

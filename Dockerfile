@@ -14,7 +14,7 @@ RUN \
 	/app && \
  cd /app && \
  npm install \
-	shout && \
+	thelounge && \
 
 # cleanup
  npm cache clean
