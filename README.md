@@ -1,10 +1,20 @@
-![https://linuxserver.io](https://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)
+[linuxserverurl]: https://linuxserver.io
+[forumurl]: https://forum.linuxserver.io
+[ircurl]: https://www.linuxserver.io/index.php/irc/
+[podcasturl]: https://www.linuxserver.io/index.php/category/podcast/
 
-The [LinuxServer.io](https://www.linuxserver.io/) team brings you another quality container release featuring auto-update on startup, easy user mapping and community support. Be sure to checkout our [forums](https://forum.linuxserver.io/index.php) or for real-time support our [IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
+[![linuxserver.io](https://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)][linuxserverurl]
+
+The [LinuxServer.io][linuxserverurl] team brings you another container release featuring easy user mapping and community support. Find us for support at:
+* [forum.linuxserver.io][forumurl]
+* [IRC][ircurl] on freenode at `#linuxserver.io`
+* [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/shout
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/shout.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/shout.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-shout)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-shout/)
+[hub]: https://hub.docker.com/r/linuxserver/shout/
 
-Shout is a web IRC client that you host on your own server.
+Thelounge (fork of shoutIRC) is a web IRC client that you host on your own server.
 
 __What features does it have?__  
 - Multiple user support
@@ -18,9 +28,9 @@ __What features does it have?__
 ```
 docker create \
   --name=shout \
-  -v /etc/localtime:/etc/localtime:ro \
   -v <path to data>:/config \
   -e PGID=<gid> -e PUID=<uid>  \
+  -e TZ=<timezone> \
   -p 9000:9000 \
   linuxserver/shout
 ```
@@ -28,23 +38,35 @@ docker create \
 **Parameters**
 
 * `-p 9000` - the port(s)
-* `-v /etc/localtime` for timesync - *optional*
 * `-v /config` -
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
+* `-e TZ` for timezone information, eg Europe/London
 
-It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it shout /bin/bash`.
+It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it shout /bin/bash`.
 
 ### User / Group Identifiers
 
-**TL;DR** - The `PGID` and `PUID` values set the user / group you'd like your container to 'run as' to the host OS. This can be a user you've created or even root (not recommended).
+Sometimes when using data volumes (`-v` flags) permissions issues can arise between the host OS and the container. We avoid this issue by allowing you to specify the user `PUID` and group `PGID`. Ensure the data volume directory on the host is owned by the same user you specify and it will "just work" ™.
 
-Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.
+In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as below:
+
+```
+  $ id <dockeruser>
+    uid=1001(dockeruser) gid=1001(dockergroup) groups=1001(dockergroup)
+```
 
 ## Setting up the application
 
 To log in to the application, browse to https://<hostip>:9000.
 
+## Info
+
+* Shell access whilst the container is running: `docker exec -it shout /bin/bash`
+* To monitor the logs of the container in realtime: `docker logs -f shout`
+
 ## Versions
-+ **04.02.2016:** Switch to node 5.x
-+ **11.12.2015:** Initial Release
++ **31.08.16:** Switch to thelounge fork,
+rebase to alpine linux.
++ **04.02.16:** Switch to node 5.x
++ **11.12.15:** Initial Release
