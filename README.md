@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsiocommunity/shout-irc
-[![Docker Pulls](https://img.shields.io/docker/pulls/lsiocommunity/shout-irc.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsiocommunity/shout-irc.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-shout)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-shout/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/lsiocommunity/shout-irc.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsiocommunity/shout-irc.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/Community/lsiocommunity-shout-irc)](http://jenkins.linuxserver.io:8080/job/Dockers/job/Community/job/lsiocommunity-shout-irc/)
 [hub]: https://hub.docker.com/r/lsiocommunity/shout-irc/
 
 Thelounge (fork of shoutIRC) is a web IRC client that you host on your own server.
