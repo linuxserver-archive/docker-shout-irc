@@ -1,11 +1,18 @@
-![https://linuxserver.io](https://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)
+[linuxserverurl]: https://linuxserver.io
+[forumurl]: https://forum.linuxserver.io
+[ircurl]: https://www.linuxserver.io/index.php/irc/
+[podcasturl]: https://www.linuxserver.io/index.php/category/podcast/
 
-The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring easy user mapping and community support. Find us for support at:
-* [forum.linuxserver.io](https://forum.linuxserver.io)
-* [IRC](https://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`
-* [Podcast](https://www.linuxserver.io/index.php/category/podcast/) covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
+[![linuxserver.io](https://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)][linuxserverurl]
+
+The [LinuxServer.io][linuxserverurl] team brings you another container release featuring easy user mapping and community support. Find us for support at:
+* [forum.linuxserver.io][forumurl]
+* [IRC][ircurl] on freenode at `#linuxserver.io`
+* [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/shout
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/shout.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/shout.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-shout)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-shout/)
+[hub]: https://hub.docker.com/r/linuxserver/shout/
 
 Thelounge (fork of shoutIRC) is a web IRC client that you host on your own server.
 
@@ -59,7 +66,7 @@ To log in to the application, browse to https://<hostip>:9000.
 * To monitor the logs of the container in realtime: `docker logs -f shout`
 
 ## Versions
-+ **20.08.16:** Switch to thelounge fork,
++ **31.08.16:** Switch to thelounge fork,
 rebase to alpine linux.
 + **04.02.16:** Switch to node 5.x
 + **11.12.15:** Initial Release
