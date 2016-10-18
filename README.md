@@ -85,5 +85,5 @@ To log in to the application, browse to https://<hostip>:9000.
 
 ## Versions
 
-+ **14-10-16:** Add version layer information.
++ **14.10.16:** Add version layer information.
 + **31.08.16:** Rebase to alpine linux, move to lsiocommunity
