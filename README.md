@@ -2,6 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
+[appurl]: http://shout-irc.com/
+[hub]: https://hub.docker.com/r/lsiocommunity/shout-irc/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,7 +14,6 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # lsiocommunity/shout-irc
 [![](https://images.microbadger.com/badges/version/lsiocommunity/shout-irc.svg)](https://microbadger.com/images/lsiocommunity/shout-irc "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsiocommunity/shout-irc.svg)](http://microbadger.com/images/lsiocommunity/shout-irc "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsiocommunity/shout-irc.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsiocommunity/shout-irc.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/Community/lsiocommunity-shout-irc)](http://jenkins.linuxserver.io:8080/job/Dockers/job/Community/job/lsiocommunity-shout-irc/)
-[hub]: https://hub.docker.com/r/lsiocommunity/shout-irc/
 
 shoutIRC is a web IRC client that you host on your own server.
 
@@ -23,8 +24,7 @@ __What features does it have?__
 - Responsive layout — works well on your smartphone
 - _.. and more!_
 
-[![shoutirc](https://raw.githubusercontent.com/linuxserver/community-templates/master/lsiocommunity/img/shout-icon.png)][shouturl]
-[shouturl]: http://shout-irc.com/
+[![shoutirc](https://raw.githubusercontent.com/linuxserver/community-templates/master/lsiocommunity/img/shout-icon.png)][appurl]
 
 ## Usage
 
