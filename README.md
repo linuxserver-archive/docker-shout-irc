@@ -52,7 +52,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` for timezone information, eg Europe/London
-* `-e SHOUT_PRIVATE` set to yes to enable user accounts (See [Set up user accounts](#add-user-accounts)
+* `-e SHOUT_PRIVATE` set to yes to enable user accounts (See [Set up user accounts](#add-user-accounts))
 
 It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it shout /bin/bash`.
 
