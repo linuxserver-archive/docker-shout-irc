@@ -34,6 +34,7 @@ docker create \
   -v <path to data>:/config \
   -e PGID=<gid> -e PUID=<uid>  \
   -e TZ=<timezone> \
+  -e SHOUT_PRIVATE=no \
   -p 9000:9000 \
   lsiocommunity/shout-irc
 ```
@@ -51,6 +52,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` for timezone information, eg Europe/London
+* `-e SHOUT_PRIVATE` set to yes to enable user accounts (See [Set up user accounts](#add-user-accounts)
 
 It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it shout /bin/bash`.
 
@@ -68,6 +70,16 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application
 
 To log in to the application, browse to https://<hostip>:9000.
+
+### Add user accounts
+
+If you want to add user accounts you must create the container with the `-e SHOUT_PRIVATE` set to yes. See [Usage](#usage). 
+
+```
+docker exec -it shout /usr/bin/with-contenv sh
+cd /app/node_modules/shout; s6-setuidgid abc node index.js add <username> --home /config
+```
+You will be asked to type a password. You can add more users by running the command again with a new username. Then reboot your container using `docker restart shout`
 
 ## Info
 
