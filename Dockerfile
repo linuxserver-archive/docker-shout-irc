@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.5
+FROM lsiobase/alpine:3.6
 MAINTAINER Gonzalo Peci, sparklyballs
 
 # set version label
@@ -6,15 +6,19 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# environment settings
+# environment settings
 ENV NPM_CONFIG_LOGLEVEL info
 
-# install packages
+# install build packages
 RUN \
+ apk add --no-cache --virtual=build-dependencies \
+	nodejs-npm && \
+
+# install runtime packages
  apk add --no-cache \
 	nodejs && \
 
-# install shout-irc
+# install shout-irc
  mkdir -p \
 	/app && \
  cd /app && \
@@ -22,8 +26,13 @@ RUN \
 	css-select \
 	shout && \
 
-# cleanup
- npm cache clean
+# cleanup
+ apk del --purge \
+	build-dependencies && \
+ rm -rf \
+	/root && \
+ mkdir -p / \
+	/root
 
 # copy local files
 COPY root/ /
