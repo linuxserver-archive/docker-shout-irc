@@ -85,6 +85,7 @@ To log in to the application, browse to https://<hostip>:9000.
 
 ## Versions
 
++ **13.12.17:** Rebase to alpine 3.7.
 + **27.05.17:** Rebase to alpine 3.6.
 + **09.02.17:** Rebase to alpine 3.5.
 + **14.10.16:** Add version layer information.
