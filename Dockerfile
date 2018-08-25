@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM lsiobase/alpine:3.8
 
 # set version label
 ARG BUILD_DATE
@@ -20,7 +20,7 @@ RUN \
  mkdir -p \
 	/app && \
  cd /app && \
- npm install \
+ npm install -g \
 	css-select \
 	shout && \
  echo "**** cleanup ****" && \
