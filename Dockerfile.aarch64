@@ -30,6 +30,7 @@ RUN \
  mkdir -p \
 	/app && \
  cd /app && \
+ npm config set unsafe-perm true && \
  npm install -g \
 	css-select \
 	shout@${SHOUTIRC_VERSION} && \
