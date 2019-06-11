@@ -21,7 +21,7 @@ RUN \
 	nodejs && \
  echo "**** install shout-irc ****" && \
  if [ -z ${SHOUTIRC_VERSION+x} ]; then \
-        SHOUTIRC_VERSION=$(curl -sL https://skimdb.npmjs.com/registry/shout \
+        SHOUTIRC_VERSION=$(curl -sL https://replicate.npmjs.com/registry/shout \
         |jq -r '. | .["dist-tags"].latest'); \
  fi && \
  mkdir -p \
