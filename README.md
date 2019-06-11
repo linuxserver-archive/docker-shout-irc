@@ -22,7 +22,7 @@ Find us at:
 [![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Pipeline-Builders/docker-shout-irc/master)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-shout-irc/job/master/)
 [![](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/shout-irc/latest/badge.svg)](https://lsio-ci.ams3.digitaloceanspaces.com/linuxserver/shout-irc/latest/index.html)
 
-[Shout-irc](http://shout-irc.com/) is a web IRC client that you host on your own server.
+THIS IMAGE IS DEPRECATED. PLEASE MIGRATE TO THELOUNGE `linuxserver/thelounge` [Shout-irc](http://shout-irc.com/) is a web IRC client that you host on your own server.
 
 [![shout-irc](https://raw.githubusercontent.com/linuxserver/community-templates/master/lsiocommunity/img/shout-icon.png)](http://shout-irc.com/)
 
@@ -175,6 +175,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **11.06.19:** - DEPRECATE IMAGE, USE THELOUNGE.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **22.02.19:** - Rebasing to alpine 3.9.
 * **28.01.19:** - Add pipeline logic and multi arch.
